@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+This file is used by the publish/package process of your Web project. You can customize the behavior of this process
+by editing this MSBuild file. In order to learn more about this please visit https://go.microsoft.com/fwlink/?LinkID=208121. 
+-->
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <TimeStampOfAssociatedLegacyPublishXmlFile />
+    <EncryptedPassword>AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAAIRzUbeLCvU6C8BVEMIlkvgAAAAACAAAAAAAQZgAAAAEAACAAAACoIkJB5MKlxMaL+46iXE7KUtkHBFPGkHQhUNosBHGzCAAAAAAOgAAAAAIAACAAAACbWKtyqutMTDFYmyaanbl2yj5huiKkWZQ1ylobtNefzIAAAABLsobiGEsnlNLy7Q/5nSFPE9abP7wOcTB3OHZcWq/thrYT8ZNrdUKB6swQTExBxfFeuW2J0r603SDh101QTN/tORZqL4LUoWE9dDpR51hmXYFhy244FIWwNA6U66SG5R+E0B4sdlk9Wcnwuo+9zSOy28Uii3cGoI4ZoIza1ax6JkAAAABcvio0Ebh1bUIVi0HhXRe2e3i1pa1SmKwwMvb7jKat6KgM2FDM4JntGWgz5sMrFyR1qUM0Jn+oKvPs7nSDYUbk</EncryptedPassword>
+  </PropertyGroup>
+  <ItemGroup>
+    <DestinationConnectionStrings Include="DoctorApp">
+      <Value>Data Source=tcp:doctorappointmentsdbserver.database.windows.net,1433%3bInitial Catalog=doctorappointments_db%3bUser Id=ralup79%40doctorappointmentsdbserver%3bPassword=dateleMele15</Value>
+    </DestinationConnectionStrings>
+  </ItemGroup>
+  <ItemGroup>
+    <EFMigrations Include="Backend.Context">
+      <Value>Data Source=tcp:doctorappointmentsdbserver.database.windows.net,1433%3bInitial Catalog=doctorappointments_db%3bUser Id=ralup79%40doctorappointmentsdbserver%3bPassword=dateleMele15</Value>
+    </EFMigrations>
+  </ItemGroup>
+</Project>

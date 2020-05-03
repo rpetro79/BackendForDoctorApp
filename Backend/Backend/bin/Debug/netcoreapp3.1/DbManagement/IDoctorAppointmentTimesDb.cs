@@ -14,7 +14,7 @@ namespace Backend.DbManagement
 
         Task<bool> putDAT(DoctorAppointmentTimes newTimes);
 
-        Task<bool> postDAT(String doctorId, List<long> newTimes);
+        Task<bool> postDAT(DoctorAppointmentTimes newTimes);
 
         Task<bool> deleteDAT(string doctorId);
     }

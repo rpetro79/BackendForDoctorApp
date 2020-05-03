@@ -35,10 +35,10 @@ namespace Backend.Controllers
             return dat;
         }
 
-        [HttpPost("{doctorId}")]
-        public async Task<ActionResult> postDAT(String doctorId, List<long> dat)
+        [HttpPost]
+        public async Task<ActionResult> postDAT(DoctorAppointmentTimes dat)
         {
-            bool x = await db.postDAT(doctorId, dat);
+            bool x = await db.postDAT(dat);
 
             if(x)
             {

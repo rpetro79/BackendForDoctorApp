@@ -109,9 +109,9 @@ namespace Backend
                     61200000,
                     63000000 });
 
-                await datDb.postDAT(dat1.doctorId, dat1.appointmentTimes);
-                await datDb.postDAT(dat2.doctorId, dat2.appointmentTimes);
-                await datDb.postDAT(dat3.doctorId, dat3.appointmentTimes);
+                await datDb.postDAT(dat1);
+                await datDb.postDAT(dat2);
+                await datDb.postDAT(dat3);
             }
             
         }

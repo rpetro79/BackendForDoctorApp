@@ -56,15 +56,15 @@ namespace Backend.DbManagement
 
         }
 
-        public async Task<bool> postDAT(String doctorId, List<long> newTimes)
+        public async Task<bool> postDAT(DoctorAppointmentTimes newTimes)
         {
-            if (context.doctors.Find(doctorId) == null)
+            if (context.doctors.Find(newTimes.doctorId) == null)
                 return false;
 
-            foreach (long time in newTimes)
+            foreach (long time in newTimes.appointmentTimes)
             {
                 DbDoctorAppointmentTimes t = new DbDoctorAppointmentTimes();
-                t.doctorId = doctorId;
+                t.doctorId = newTimes.doctorId;
                 t.appointmentTime = time;
 
                 context.doctorAppointmentTimes.Add(t);
@@ -86,7 +86,7 @@ namespace Backend.DbManagement
             if (!(await deleteDAT(newTimes.doctorId)))
                 return false;
 
-            return await postDAT(newTimes.doctorId, newTimes.appointmentTimes);
+            return await postDAT(newTimes);
         }
 
         public async Task<bool> deleteDAT(string doctorId)

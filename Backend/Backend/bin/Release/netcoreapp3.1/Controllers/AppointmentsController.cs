@@ -30,24 +30,25 @@ namespace Backend.Controllers
         }
 
         [HttpPost]
-        public async Task<ActionResult> postAppointment(Appointment appointment)
+        public async Task<ActionResult<Appointment>> postAppointment(Appointment appointment)
         {
-            if (!(await appointmentDb.postAppointmentAsync(appointment)))
+            Appointment ap = await appointmentDb.postAppointmentAsync(appointment);
+            if (ap == null)
                 return Conflict();
 
-            return Accepted();
+            return ap;
         }
 
         [HttpPut]
-        public async Task<ActionResult> putAppointment(Appointment appointment)
+        public async Task<ActionResult<Appointment>> putAppointment(Appointment appointment)
         {
-            bool x = await appointmentDb.putAppointmentAsync(appointment);
-            if (x)
+            Appointment ap = await appointmentDb.putAppointmentAsync(appointment);
+            if (ap == null)
             {
-                return Accepted();
+                return NotFound(); 
             }
 
-            return NotFound();
+            return ap;
         }
 
         [HttpDelete("{appointmentId}")]

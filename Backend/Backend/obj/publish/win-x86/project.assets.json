@@ -11391,11 +11391,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\VIA\\AND\\AssignmentBackend\\Backend\\Backend\\Backend.csproj",
+      "projectUniqueName": "D:\\VIA\\AND\\AssignmentBackend\\BackendForDoctorApp\\Backend\\Backend\\Backend.csproj",
       "projectName": "Backend",
-      "projectPath": "D:\\VIA\\AND\\AssignmentBackend\\Backend\\Backend\\Backend.csproj",
+      "projectPath": "D:\\VIA\\AND\\AssignmentBackend\\BackendForDoctorApp\\Backend\\Backend\\Backend.csproj",
       "packagesPath": "C:\\Users\\raluc\\.nuget\\packages\\",
-      "outputPath": "D:\\VIA\\AND\\AssignmentBackend\\Backend\\Backend\\obj\\publish\\win-x86\\",
+      "outputPath": "D:\\VIA\\AND\\AssignmentBackend\\BackendForDoctorApp\\Backend\\Backend\\obj\\publish\\win-x86\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"

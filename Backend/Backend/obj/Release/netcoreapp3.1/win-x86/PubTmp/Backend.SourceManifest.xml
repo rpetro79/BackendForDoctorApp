@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <sitemanifest>
-  <IisApp path="D:\VIA\AND\AssignmentBackend\Backend\Backend\obj\Release\netcoreapp3.1\win-x86\PubTmp\Out\" />
-  <dbfullsql path="D:\VIA\AND\AssignmentBackend\Backend\Backend\obj\Release\netcoreapp3.1\win-x86\PubTmp\EFSQLScripts\Backend.Context.sql" />
+  <IisApp path="D:\VIA\AND\AssignmentBackend\BackendForDoctorApp\Backend\Backend\obj\Release\netcoreapp3.1\win-x86\PubTmp\Out\" />
+  <dbfullsql path="D:\VIA\AND\AssignmentBackend\BackendForDoctorApp\Backend\Backend\obj\Release\netcoreapp3.1\win-x86\PubTmp\EFSQLScripts\Backend.Context.sql" />
 </sitemanifest>

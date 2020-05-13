@@ -16,11 +16,11 @@ namespace Backend.DbManagement
             this.context = context;
         }
 
-        public async Task<bool> putAppointmentAsync(Appointment appointment)
+        public async Task<Appointment> putAppointmentAsync(Appointment appointment)
         {
             Appointment dbApp = await context.appointments.FindAsync(appointment.appointmentId);
             if (dbApp == null)
-                return false;
+                return null;
 
             dbApp.copy(appointment);
             context.Entry(dbApp).State = EntityState.Modified;
@@ -30,13 +30,13 @@ namespace Backend.DbManagement
             }
             catch (DbUpdateException)
             {
-                return false;
+                return null;
             }
 
-            return true;
+            return appointment;
         }
 
-        public async Task<bool> postAppointmentAsync(Appointment appointment)
+        public async Task<Appointment> postAppointmentAsync(Appointment appointment)
         {
             context.appointments.Add(appointment);
 
@@ -46,10 +46,16 @@ namespace Backend.DbManagement
             }
             catch (DbUpdateException)
             {
-                return false;
+                return null;
             }
 
-            return true;
+            List<Appointment> appointments = await context.appointments.Where(a => a.datetime == appointment.datetime && a.patientId == appointment.patientId && a.doctorId == appointment.doctorId).ToListAsync();
+            if (appointments == null)
+                return null;
+            if (appointments.Count > 0)
+                return appointments[0];
+
+            return null;
         }
 
         public async Task deleteAppointmentAsync(int appintmentId)

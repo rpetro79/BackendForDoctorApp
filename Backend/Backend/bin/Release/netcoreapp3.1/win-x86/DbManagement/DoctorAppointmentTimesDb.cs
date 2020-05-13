@@ -20,7 +20,7 @@ namespace Backend.DbManagement
         public async Task<List<long>> getAvailableTimesForDay(string doctorId, long day)
         {
             long oneDayInMiliseconds = 24 * 60 * 60 * 1000;
-            List<Appointment> list = await context.appointments.Where(ap => ap.doctorId == doctorId && ap.datetime >= day && ap.datetime < (day + oneDayInMiliseconds)).ToListAsync<Appointment>();
+            List<Appointment> list = await context.appointments.Where(ap => ap.doctorId == doctorId && ap.datetime >= day && ap.datetime < (day + oneDayInMiliseconds) && ap.cancelled == false).ToListAsync<Appointment>();
 
             List<DbDoctorAppointmentTimes> times = await context.doctorAppointmentTimes.Where(t => t.doctorId == doctorId).ToListAsync<DbDoctorAppointmentTimes>();
             List<long> returnList = new List<long>();

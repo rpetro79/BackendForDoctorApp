@@ -8,9 +8,9 @@ namespace Backend.DbManagement
 {
     public interface IAppointmentDb
     {
-        Task<bool> putAppointmentAsync(Appointment appointment);
+        Task<Appointment> putAppointmentAsync(Appointment appointment);
 
-        Task<bool> postAppointmentAsync(Appointment appointment);
+        Task<Appointment> postAppointmentAsync(Appointment appointment);
 
         Task deleteAppointmentAsync(int appintmentId);
 
